@@ -2,16 +2,16 @@ import { useEffect, useState } from "react";
 
 import {
   Button,
-  CardWrapper,
-  FrameBgImg,
-  FrameImg,
+  Card,
+  FrameBgc,
+  Frame,
   Img,
-  InfoCount,
-  InfoText,
+  Count,
+  Text,
   InfoWrapper,
   Logo,
   PictureImg,
-  StripImg,
+  LineImg,
 } from "components/Card/Card.styled";
 
 function TweetCard({ user }) {
@@ -43,28 +43,26 @@ function TweetCard({ user }) {
   };
 
   return (
-    <CardWrapper>
+    <Card>
       <Logo />
       <PictureImg />
-      <StripImg />
-      <FrameBgImg />
+      <LineImg />
+      <FrameBgc />
       <Img src={avatar} alt="avatar" width={70} height={70} loading="lazy" />
-      <FrameImg />
+      <Frame />
       <InfoWrapper>
-        <InfoText>
-          <InfoCount>{tweets}</InfoCount>tweets
-        </InfoText>
-        <InfoText>
-          <InfoCount>
-            {(followers + addition).toLocaleString("en-US")}
-          </InfoCount>
+        <Text>
+          <Count>{tweets}</Count>tweets
+        </Text>
+        <Text>
+          <Count>{(followers + addition).toLocaleString("en-US")}</Count>
           followers
-        </InfoText>
+        </Text>
       </InfoWrapper>
       <Button type="button" onClick={stateToggle} color={btnColor}>
         {btnCaption}
       </Button>
-    </CardWrapper>
+    </Card>
   );
 }
 

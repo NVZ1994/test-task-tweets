@@ -1,6 +1,6 @@
 import { ReactComponent as LogoIcon } from "assets/logo.svg";
 import {
-  HeaderWrapper,
+  HeaderSection,
   Link,
   LogoWrapper,
   Nav,
@@ -8,7 +8,7 @@ import {
 
 function Header() {
   return (
-    <HeaderWrapper>
+    <HeaderSection>
       <LogoWrapper>
         <LogoIcon />
       </LogoWrapper>
@@ -16,7 +16,7 @@ function Header() {
         <Link to="/">Home</Link>
         <Link to="/tweets">Tweets</Link>
       </Nav>
-    </HeaderWrapper>
+    </HeaderSection>
   );
 }
 

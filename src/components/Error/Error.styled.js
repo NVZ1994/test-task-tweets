@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const MsgWrapper = styled.div`
+export const ErrorWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,5 +8,5 @@ export const MsgWrapper = styled.div`
   margin-top: 72px;
   font-size: 24px;
   font-weight: 700;
-  color: #973737F2  ;
+  color: #cc1b1b;
 `;

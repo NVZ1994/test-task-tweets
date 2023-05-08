@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
-export const HeaderWrapper = styled.header`
+export const HeaderSection = styled.header`
   position: fixed;
   top: 0;
   display: flex;
@@ -46,6 +46,6 @@ export const Link = styled(NavLink)`
   }
 
   :hover:not(&.active) {
-    background-color: #ebd8ff33;
+    background-color: #ebd8ff;
   }
 `;

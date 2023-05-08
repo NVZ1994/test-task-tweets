@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const SpinnerWrapper = styled.div`
+export const Spinner = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,5 +8,5 @@ export const SpinnerWrapper = styled.div`
   margin-top: 72px;
   font-size: 24px;
   font-weight: 700;
-  color: #373777CC  ;
+  color: #383880;
 `;

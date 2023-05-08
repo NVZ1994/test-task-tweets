@@ -1,14 +1,14 @@
-import { FormWrapper, Option, Select } from "components/Filter/Filter.styled";
+import { Form, Option, Select } from "components/Filter/Filter.styled";
 
 function Filter({ filterHandle }) {
   return (
-    <FormWrapper>
+    <Form>
       <Select name="following" onChange={filterHandle}>
-        <Option value="all">show all</Option>
-        <Option value="follow">follow</Option>
-        <Option value="following">following</Option>
+        <Option value="all">Show all</Option>
+        <Option value="follow">Follow</Option>
+        <Option value="following">Following</Option>
       </Select>
-    </FormWrapper>
+    </Form>
   );
 }
 

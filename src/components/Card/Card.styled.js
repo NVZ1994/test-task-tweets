@@ -5,7 +5,7 @@ import Line from "assets/line.png";
 import Circle from "assets/circle.png";
 import FrameBg from "assets/frameBg.png";
 
-export const CardWrapper = styled.div`
+export const Card = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@ export const PictureImg = styled.div`
   background: url(${Picture}) no-repeat;
 `;
 
-export const StripImg = styled.div`
+export const LineImg = styled.div`
   position: absolute;
   top: 214px;
   width: 380px;
@@ -44,7 +44,7 @@ export const StripImg = styled.div`
   background: url(${Line}) no-repeat;
 `;
 
-export const FrameImg = styled.div`
+export const Frame = styled.div`
   position: absolute;
   top: 178px;
   width: 90px;
@@ -53,7 +53,7 @@ export const FrameImg = styled.div`
   overflow: hidden;
 `;
 
-export const FrameBgImg = styled.div`
+export const FrameBgc = styled.div`
   position: absolute;
   top: 178px;
   width: 80px;
@@ -76,11 +76,9 @@ export const InfoWrapper = styled.div`
   gap: 16px;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 80px;
   margin-top: 276px;
 `;
-export const InfoText = styled.p`
+export const Text = styled.p`
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -88,7 +86,7 @@ export const InfoText = styled.p`
   color: #ebd8ff;
 `;
 
-export const InfoCount = styled.span`
+export const Count = styled.span`
   margin-right: 7px;
 `;
 

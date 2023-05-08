@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FormWrapper = styled.form`
+export const Form = styled.form`
   position: fixed;
   display: flex;
   justify-content: center;
@@ -11,8 +11,6 @@ export const FormWrapper = styled.form`
 
 export const Select = styled.select`
   padding: 12px;
-//   width: 196px;
-//   height: 100%;
   border-radius: 10px;
   border: none;
   background-color: #471ca9;
@@ -21,7 +19,6 @@ export const Select = styled.select`
   appearance: button;
   outline: none;
   cursor: pointer;
-
   font-weight: 600;
   font-size: 18px;
   line-height: 1.22;

@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  width: 196px;
-  height: 50px;
+  padding: 15px 20px;
   border-radius: 10px;
   border: none;
   cursor: pointer;
@@ -15,7 +14,7 @@ export const Button = styled.button`
   color: #ebd8ff;
 
   :hover {
-    background-color: #471ca9E0;
+    background-color: #471ca9;
   }
 
   :active {

@@ -9,12 +9,7 @@ import LoadMore from "components/LoadMoreBtn/LoadMoreBtn";
 import Filter from "components/Filter/Filter";
 import { Loader } from "components/Loader/Loader";
 import { Error } from "components/Error/Error";
-import {
-  HiddenTitle,
-  Link,
-  List,
-  Section,
-} from "pages/TweetsPage/TweetsPage.styled";
+import { Link, List, Section } from "pages/TweetsPage/TweetsPage.styled";
 
 import { Helmet } from "react-helmet";
 
@@ -49,25 +44,30 @@ function TweetsPage() {
     setCurrentPage((page) => page + 1);
   };
 
-  const dropDownFilter = (e) => {
-    const filter = e.target.value;
-    if (filter === "all") {
-      setVisibleUsers(users);
-    } else if (filter === "follow") {
-      setVisibleUsers(
-        users.filter(
+  const dropDownFilter = (event) => {
+    const filter = event.target.value;
+    let visibleUsers = users;
+
+    switch (filter) {
+      case "all":
+        visibleUsers = users;
+        break;
+      case "follow":
+        visibleUsers = users.filter(
           (user) => !JSON.parse(localStorage.getItem(`isFollowing${user.id}`))
-        )
-      );
-    } else if (filter === "following") {
-      setVisibleUsers(
-        users.filter((user) =>
+        );
+        break;
+      case "following":
+        visibleUsers = users.filter((user) =>
           JSON.parse(localStorage.getItem(`isFollowing${user.id}`))
-        )
-      );
-    } else {
-      console.error("invalid filter value");
+        );
+        break;
+      default:
+        console.error("Invalid filter value");
+        break;
     }
+
+    setVisibleUsers(visibleUsers);
     setCurrentPage(1);
   };
 
@@ -78,7 +78,6 @@ function TweetsPage() {
       <Helmet>
         <title>Tweets</title>
       </Helmet>
-      <HiddenTitle>Tweets Page</HiddenTitle>
       <Link to="/">
         <MdOutlineArrowBackIosNew />
       </Link>
@@ -87,8 +86,8 @@ function TweetsPage() {
       {error && <Error />}
       <List>
         {visibleUserCards.map((user) => (
-          <li key={user.id}>
-            <TweetCard user={user} />
+          <li>
+            <TweetCard key={user.id} user={user} />
           </li>
         ))}
       </List>
