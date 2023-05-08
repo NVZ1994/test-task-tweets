@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
+
 import { fetchUsers } from "services/api/usersApi";
 import useWindowDimensions from "services/hooks/useWindowDimensions";
+
 import TweetCard from "components/Card/Card";
 import LoadMore from "components/LoadMoreBtn/LoadMoreBtn";
 import Filter from "components/Filter/Filter";
@@ -41,7 +43,7 @@ function TweetsPage() {
     fetchData();
   }, []);
 
-  const cardsPerPage = (width >= 904 && width < 1332) || width >= 1760 ? 4 : 3;
+  const cardsPerPage = (width >= 800 && width < 1200) || width >= 1760 ? 4 : 3;
 
   const handleLoadMore = () => {
     setCurrentPage((page) => page + 1);
