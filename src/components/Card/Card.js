@@ -8,7 +8,7 @@ import {
   Img,
   Count,
   Text,
-  InfoWrapper,
+  Info,
   Logo,
   PictureImg,
   LineImg,
@@ -50,7 +50,7 @@ function TweetCard({ user }) {
       <FrameBgc />
       <Img src={avatar} alt="avatar" width={70} height={70} loading="lazy" />
       <Frame />
-      <InfoWrapper>
+      <Info>
         <Text>
           <Count>{tweets}</Count>tweets
         </Text>
@@ -58,7 +58,7 @@ function TweetCard({ user }) {
           <Count>{(followers + addition).toLocaleString("en-US")}</Count>
           followers
         </Text>
-      </InfoWrapper>
+      </Info>
       <Button type="button" onClick={stateToggle} color={btnColor}>
         {btnCaption}
       </Button>

@@ -65,7 +65,7 @@ export const Img = styled.img`
   border-radius: 50%;
 `;
 
-export const InfoWrapper = styled.div`
+export const Info = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
