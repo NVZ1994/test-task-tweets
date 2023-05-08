@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { ReactComponent as LogoIcon } from "../../assets/logo.svg";
-import Picture from "../../assets/picture.png";
-import Line from "../../assets/line.png";
-import Circle from "../../assets/circle.png";
-import FrameBg from "../../assets/frameBg.png";
+import { ReactComponent as LogoIcon } from "assets/logo.svg";
+import Picture from "assets/picture.png";
+import Line from "assets/line.png";
+import Circle from "assets/circle.png";
+import FrameBg from "assets/frameBg.png";
 
 export const CardWrapper = styled.div`
   position: relative;
@@ -59,7 +59,6 @@ export const FrameBgImg = styled.div`
   width: 80px;
   height: 80px;
   background: url(${FrameBg}) no-repeat;
-  
 `;
 
 export const Img = styled.img`

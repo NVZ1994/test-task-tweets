@@ -1,5 +1,10 @@
-import { ReactComponent as LogoIcon } from "../../assets/logo.svg";
-import { HeaderWrapper, Link, LogoWrapper, Nav } from "./Header.styled";
+import { ReactComponent as LogoIcon } from "assets/logo.svg";
+import {
+  HeaderWrapper,
+  Link,
+  LogoWrapper,
+  Nav,
+} from "components/Header/Header.styled";
 
 function Header() {
   return (

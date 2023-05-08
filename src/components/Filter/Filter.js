@@ -1,4 +1,4 @@
-import { FormWrapper, Option, Select } from "./Filter.styled";
+import { FormWrapper, Option, Select } from "components/Filter/Filter.styled";
 
 function Filter({ filterHandle }) {
   return (

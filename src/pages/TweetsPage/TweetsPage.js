@@ -1,13 +1,18 @@
 import { useEffect, useState } from "react";
-import { fetchUsers } from "../../services/api/usersApi";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
-import useWindowDimensions from "../../services/hooks/useWindowDimensions";
-import TweetCard from "../../components/Card/Card";
-import LoadMore from "../../components/LoadMoreBtn/LoadMoreBtn";
-import Filter from "../../components/Filter/Filter";
-import { Loader } from "../../components/Loader/Loader";
-import { Error } from "../../components/Error/Error";
-import { HiddenTitle, Link, List, Section } from "./TweetsPage.styled";
+import { fetchUsers } from "services/api/usersApi";
+import useWindowDimensions from "services/hooks/useWindowDimensions";
+import TweetCard from "components/Card/Card";
+import LoadMore from "components/LoadMoreBtn/LoadMoreBtn";
+import Filter from "components/Filter/Filter";
+import { Loader } from "components/Loader/Loader";
+import { Error } from "components/Error/Error";
+import {
+  HiddenTitle,
+  Link,
+  List,
+  Section,
+} from "pages/TweetsPage/TweetsPage.styled";
 
 import { Helmet } from "react-helmet";
 

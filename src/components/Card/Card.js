@@ -11,7 +11,7 @@ import {
   Logo,
   PictureImg,
   StripImg,
-} from "./Card.styled";
+} from "components/Card/Card.styled";
 
 function TweetCard({ user }) {
   const { id, avatar, tweets, followers } = user;

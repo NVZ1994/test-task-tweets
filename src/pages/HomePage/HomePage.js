@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import { Link, Text, Title, Wrapper } from "./HomePage.styled";
+import { Link, Text, Title, Wrapper } from "pages/HomePage/HomePage.styled";
 
 function HomePage() {
   return (

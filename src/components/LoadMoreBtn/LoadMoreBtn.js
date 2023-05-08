@@ -1,4 +1,4 @@
-import { Button } from "./LoadMoreBtn.styled";
+import { Button } from "components/LoadMoreBtn/LoadMoreBtn.styled";
 
 function LoadMore({ handleClick }) {
   return (

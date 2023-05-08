@@ -1,4 +1,4 @@
-import { MsgWrapper } from "./Error.styled";
+import { MsgWrapper } from "components/Error/Error.styled";
 
 export const Error = () => (
   <MsgWrapper>
