@@ -9,7 +9,7 @@ export const HeaderSection = styled.header`
   align-items: center;
   width: 100%;
   padding: 16px 48px;
-  background-color: #471ca9;
+  background-color: #647dc8;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   z-index: 1;
 `;
@@ -46,6 +46,8 @@ export const Link = styled(NavLink)`
   }
 
   :hover:not(&.active) {
+    color: #3737a9;
+    font-weight: 700;
     background-color: #ebd8ff;
   }
 `;

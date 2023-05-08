@@ -25,12 +25,9 @@ export const List = styled.ul`
 export const Link = styled(NavLink)`
   position: fixed;
   left: 48px;
-  display: flex;
-  align-items: center;
-  height: 50px;
   padding: 12px;
   border-radius: 10px;
-  background-color: #471ca9;
+  background-color: #647dc8;
   color: #ebd8ff;
   font-size: 18px;
   cursor: pointer;
@@ -38,6 +35,6 @@ export const Link = styled(NavLink)`
 
   :hover,
   :focus {
-    background-color: #471ca9cc;
+    background-color: #471ca9;
   }
 `;

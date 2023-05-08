@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { MdOutlineArrowBackIosNew } from "react-icons/md";
 
 import { fetchUsers } from "services/api/usersApi";
 import useWindowDimensions from "services/hooks/useWindowDimensions";
@@ -44,7 +43,7 @@ function TweetsPage() {
     setCurrentPage((page) => page + 1);
   };
 
-  const dropDownFilter = (event) => {
+  const dropDown = (event) => {
     const filter = event.target.value;
     let visibleUsers = users;
 
@@ -78,10 +77,8 @@ function TweetsPage() {
       <Helmet>
         <title>Tweets</title>
       </Helmet>
-      <Link to="/">
-        <MdOutlineArrowBackIosNew />
-      </Link>
-      <Filter filterHandle={dropDownFilter} />
+      <Link to="/">Back</Link>
+      <Filter dropDown={dropDown} />
       {isLoading && <Loader />}
       {error && <Error />}
       <List>

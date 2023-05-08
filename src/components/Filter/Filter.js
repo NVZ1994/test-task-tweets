@@ -1,12 +1,12 @@
 import { Form, Option, Select } from "components/Filter/Filter.styled";
 
-function Filter({ filterHandle }) {
+function Filter({ dropDown }) {
   return (
     <Form>
-      <Select name="following" onChange={filterHandle}>
+      <Select name="following" onChange={dropDown}>
         <Option value="all">Show all</Option>
         <Option value="follow">Follow</Option>
-        <Option value="following">Following</Option>
+        <Option value="following">Followings</Option>
       </Select>
     </Form>
   );

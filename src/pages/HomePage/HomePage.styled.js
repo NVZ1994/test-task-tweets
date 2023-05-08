@@ -7,14 +7,8 @@ export const Wrapper = styled.div`
   gap: 24px;
   height: 60vh;
   margin-top: 48px;
-  padding: 24px 200px 24px 48px;
+  padding: 48px;
   color: #373737;
-  background-image: linear-gradient(
-    to right,
-    rgba(145, 184, 154, 0.6) 25%,
-    rgb(137, 200, 202)
-  );
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
   @media screen and (max-width: 768px) {
     width: 440px;

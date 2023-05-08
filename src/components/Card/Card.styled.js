@@ -12,12 +12,7 @@ export const Card = styled.div`
   align-items: center;
   width: 380px;
   height: 460px;
-  background-image: linear-gradient(
-    to top left,
-    #4b2a99 10%,
-    #5736a3 42%,
-    #471ca9
-  );
+  background-color: #647dc8;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 `;
@@ -91,7 +86,7 @@ export const Count = styled.span`
 `;
 
 export const Button = styled.button`
-  width: 196px;
+  min-width: 190px;
   height: 50px;
   margin-top: 18px;
   border-radius: 10px;
@@ -106,7 +101,7 @@ export const Button = styled.button`
   color: #373737;
 
   :hover {
-    background-color: ${({ color }) => `${color}D0`};
+    background-color: ${({ color }) => color};
   }
 
   :active {

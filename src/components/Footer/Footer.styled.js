@@ -5,7 +5,7 @@ export const FooterSection = styled.footer`
   bottom: 0;
   width: 100%;
   padding: 24px;
-  background-color: #471ca9;
+  background-color: #647dc8;
   color: #ebd8ff;
   z-index: 1;
 

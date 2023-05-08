@@ -4,7 +4,6 @@ export const Form = styled.form`
   position: fixed;
   display: flex;
   justify-content: center;
-  width: 100%;
   height: 50px;
   z-index: 1;
 `;
@@ -13,7 +12,7 @@ export const Select = styled.select`
   padding: 12px;
   border-radius: 10px;
   border: none;
-  background-color: #471ca9;
+  background-color: #647dc8;
   font-size: 14px;
   box-shadow: 0px 3.5px 3.5px rgba(0, 0, 0, 0.25);
   appearance: button;
@@ -22,8 +21,11 @@ export const Select = styled.select`
   font-weight: 600;
   font-size: 18px;
   line-height: 1.22;
-  text-transform: uppercase;
   color: #ebd8ff;
+
+  :hover {
+    background-color: #3737a9;
+  }
 `;
 
 export const Option = styled.option`
