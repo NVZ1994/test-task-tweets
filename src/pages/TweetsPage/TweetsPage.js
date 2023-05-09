@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { fetchUsers } from "services/API/usersApi";
+import { fetchUsers } from "services/API/usersAPI";
 import useWindowResize from "services/hooks/useWindowResize";
 
 import TweetCard from "components/Card/Card";
