@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import useWindowResize from "services/hooks/useWindowResize";
-import { fetchUsers } from "../../services/Api/usersApi";
+import { fetchUsers } from "services/Api/usersApi";
 
 import TweetCard from "components/Card/Card";
 import LoadMore from "components/LoadMoreBtn/LoadMoreBtn";
