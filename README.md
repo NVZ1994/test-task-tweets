@@ -12,6 +12,12 @@ Once you have cloned the repository, you can install the required dependencies b
 
 npm install
 
+To start the application, run the following command in the project directory:
+
+npm start
+
+This will start the application and open it in your default browser. If the application does not automatically open, you can navigate to http://localhost:3000 in your browser to access it.
+
 Contributing.
 If you would like to contribute to this project, feel free to submit a pull request. Please make sure to follow the existing code style and include tests for any new features.
 
