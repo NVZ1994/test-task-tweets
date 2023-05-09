@@ -32,6 +32,7 @@ export const Link = styled(NavLink)`
   font-size: 18px;
   cursor: pointer;
   z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3.5px 3.5px;
 
   :hover,
   :focus {

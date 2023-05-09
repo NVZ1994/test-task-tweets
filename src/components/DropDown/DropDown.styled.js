@@ -24,7 +24,7 @@ export const Select = styled.select`
   color: #ebd8ff;
 
   :hover {
-    background-color: #3737a9;
+    background-color: #471ca9;
   }
 `;
 

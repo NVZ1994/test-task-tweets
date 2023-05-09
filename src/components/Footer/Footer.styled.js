@@ -6,16 +6,14 @@ export const FooterSection = styled.footer`
   width: 100%;
   padding: 24px;
   background-color: #647dc8;
-  color: #ebd8ff;
   z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px -10px 20px, rgba(0, 0, 0, 0.5) 0px 0px 6px;
 
   @media screen and (max-width: 768px) {
-    position: absolute;
     bottom: auto;
     flex-direction: column;
     gap: 24px;
     padding-top: 72px;
-    text-align: center;
   }
 `;
 
