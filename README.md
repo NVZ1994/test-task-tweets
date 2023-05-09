@@ -6,7 +6,7 @@ To use this application, you will need to have Node.js and npm installed on your
 
 After installing Node.js and npm, you can clone this repository by running the following command in your terminal:
 
-git clone https://github.com/your-username/instagram-follower-counter.git
+git clone https://github.com/NVZ1994/test-task-tweets.git
 
 Once you have cloned the repository, you can install the required dependencies by running the following command in the project directory:
 
