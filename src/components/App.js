@@ -15,8 +15,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="tweets-page" element={<TweetsPage />} />
           <Route path="*" element={<Home />} />
-          <Route path="/tweets-page" element={<TweetsPage />} />
         </Route>
       </Routes>
     </>
