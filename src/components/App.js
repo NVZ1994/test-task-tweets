@@ -1,7 +1,7 @@
 import { lazy } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
-// import Layout from "components/Layout/Layout";
+import Layout from "components/Layout/Layout";
 import Home from "pages/HomePage/HomePage";
 
 import { GlobalStyle } from "components/GlobalStyle";
@@ -13,10 +13,10 @@ function App() {
     <>
       <GlobalStyle />
       <Routes>
-        {/* <Route path="/" element={<Layout />}> */}
-        <Route index element={<Home />}>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
           <Route path="tweets-page" element={<TweetsPage />} />
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
     </>
