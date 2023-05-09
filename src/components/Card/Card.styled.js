@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { ReactComponent as LogoIcon } from "assets/logo.svg";
-import Picture from "assets/picture.png";
-import Line from "assets/line.png";
-import Circle from "assets/circle.png";
-import FrameBg from "assets/frameBg.png";
+import { ReactComponent as LogoIcon } from "cardParts/logo.svg";
+import Picture from "cardParts/picture.png";
+import Line from "cardParts/line.png";
+import Circle from "cardParts/circle.png";
+import FrameBg from "cardParts/frameBg.png";
 
 export const Card = styled.div`
   position: relative;
@@ -28,7 +28,7 @@ export const PictureImg = styled.div`
   width: 308px;
   height: 168px;
   top: 28px;
-  background: url(${Picture}) no-repeat;
+  background: url(${Picture});
 `;
 
 export const LineImg = styled.div`
@@ -36,7 +36,7 @@ export const LineImg = styled.div`
   top: 214px;
   width: 380px;
   height: 8px;
-  background: url(${Line}) no-repeat;
+  background: url(${Line});
 `;
 
 export const Frame = styled.div`
@@ -44,7 +44,7 @@ export const Frame = styled.div`
   top: 178px;
   width: 90px;
   height: 89px;
-  background: url(${Circle}) no-repeat;
+  background: url(${Circle});
   overflow: hidden;
 `;
 
@@ -53,7 +53,7 @@ export const FrameBgc = styled.div`
   top: 178px;
   width: 80px;
   height: 80px;
-  background: url(${FrameBg}) no-repeat;
+  background: url(${FrameBg});
 `;
 
 export const Img = styled.img`

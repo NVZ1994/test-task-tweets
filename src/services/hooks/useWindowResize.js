@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
-export default function useWindowDimensions() {
+export default function useWindowResize() {
   const isSSR = typeof window === "undefined";
-  const [windowDimensions, setWindowDimensions] = useState({
+  const [windowResize, setWindowResize] = useState({
     width: isSSR ? 1200 : window.innerWidth,
     height: isSSR ? 800 : window.innerHeight,
   });
@@ -11,7 +11,7 @@ export default function useWindowDimensions() {
     if (isSSR) return;
 
     function handleResize() {
-      setWindowDimensions({
+      setWindowResize({
         width: window.innerWidth,
         height: window.innerHeight,
       });
@@ -21,5 +21,5 @@ export default function useWindowDimensions() {
     return () => window.removeEventListener("resize", handleResize);
   }, [isSSR]);
 
-  return windowDimensions;
+  return windowResize;
 }

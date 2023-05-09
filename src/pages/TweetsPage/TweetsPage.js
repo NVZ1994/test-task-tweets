@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
-import { fetchUsers } from "services/api/usersApi";
-import useWindowDimensions from "services/hooks/useWindowDimensions";
+import { fetchUsers } from "services/API/usersApi";
+import useWindowResize from "services/hooks/useWindowResize";
 
 import TweetCard from "components/Card/Card";
 import LoadMore from "components/LoadMoreBtn/LoadMoreBtn";
-import Filter from "components/Filter/Filter";
+import DropDown from "components/DropDown/DropDown";
 import { Loader } from "components/Loader/Loader";
 import { Error } from "components/Error/Error";
 import { Link, List, Section } from "pages/TweetsPage/TweetsPage.styled";
@@ -14,11 +14,11 @@ import { Helmet } from "react-helmet";
 
 function TweetsPage() {
   const [users, setUsers] = useState([]);
-  const [visibleUsers, setVisibleUsers] = useState([]);
+  const [shownUsers, setShownUsers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const { width } = useWindowDimensions();
+  const { width } = useWindowResize();
 
   useEffect(() => {
     setIsLoading(true);
@@ -27,7 +27,7 @@ function TweetsPage() {
       try {
         const data = await fetchUsers();
         setUsers(data);
-        setVisibleUsers(data);
+        setShownUsers(data);
       } catch (error) {
         setError(error.message);
       } finally {
@@ -44,33 +44,33 @@ function TweetsPage() {
   };
 
   const dropDown = (event) => {
-    const filter = event.target.value;
-    let visibleUsers = users;
+    const options = event.target.value;
+    let shownUsers = users;
 
-    switch (filter) {
+    switch (options) {
       case "all":
-        visibleUsers = users;
+        shownUsers = users;
         break;
       case "follow":
-        visibleUsers = users.filter(
+        shownUsers = users.filter(
           (user) => !JSON.parse(localStorage.getItem(`isFollowing${user.id}`))
         );
         break;
       case "following":
-        visibleUsers = users.filter((user) =>
+        shownUsers = users.filter((user) =>
           JSON.parse(localStorage.getItem(`isFollowing${user.id}`))
         );
         break;
       default:
-        console.error("Invalid filter value");
+        console.error("Invalid options value");
         break;
     }
 
-    setVisibleUsers(visibleUsers);
+    setShownUsers(shownUsers);
     setCurrentPage(1);
   };
 
-  const visibleUserCards = visibleUsers.slice(0, currentPage * cardsPerPage);
+  const shownUserCards = shownUsers.slice(0, currentPage * cardsPerPage);
 
   return (
     <Section>
@@ -78,17 +78,17 @@ function TweetsPage() {
         <title>Tweets</title>
       </Helmet>
       <Link to="/">Back</Link>
-      <Filter dropDown={dropDown} />
+      <DropDown dropDown={dropDown} />
       {isLoading && <Loader />}
       {error && <Error />}
       <List>
-        {visibleUserCards.map((user) => (
+        {shownUserCards.map((user) => (
           <li>
             <TweetCard key={user.id} user={user} />
           </li>
         ))}
       </List>
-      {visibleUsers.length > visibleUserCards.length && (
+      {shownUsers.length > shownUserCards.length && (
         <LoadMore handleClick={handleLoadMore} />
       )}
     </Section>

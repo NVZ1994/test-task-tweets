@@ -1,10 +1,11 @@
-import { ReactComponent as LogoIcon } from "assets/logo.svg";
+import { ReactComponent as LogoIcon } from "cardParts/logo.svg";
+
 import {
   HeaderSection,
   Link,
   LogoWrapper,
   Nav,
-} from "components/Header/Header.styled";
+} from "components/AppBar/AppBar.styled";
 
 function Header() {
   return (
@@ -14,7 +15,7 @@ function Header() {
       </LogoWrapper>
       <Nav>
         <Link to="/">Home</Link>
-        <Link to="/tweets">Tweets</Link>
+        <Link to="/tweets-page">Tweets</Link>
       </Nav>
     </HeaderSection>
   );

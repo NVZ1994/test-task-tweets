@@ -6,8 +6,8 @@ function HomePage() {
       <Wrapper>
         <Title>Welcome!</Title>
         <Text>
-          <Link to="/tweets">Here</Link> you can see cards with tweets of users
-          with their tweets and followers amount.
+          <Link to="/tweets-page">Here</Link> you can see cards with tweets of
+          users with their tweets and followers amount.
         </Text>
       </Wrapper>
     </section>

@@ -17,7 +17,7 @@ import {
 function TweetCard({ user }) {
   const { id, avatar, tweets, followers } = user;
   const [isFollowing, setIsFollowing] = useState(false);
-  const [addition, setAddition] = useState(0);
+  const [additional, setAdditional] = useState(0);
   const [btnCaption, setBtnCaption] = useState("Follow");
   const [btnColor, setBtnColor] = useState("#EBD8FF");
 
@@ -27,17 +27,17 @@ function TweetCard({ user }) {
 
   useEffect(() => {
     if (isFollowing) {
-      setAddition(1);
+      setAdditional(1);
       setBtnCaption("Following");
       setBtnColor("#5CD3A8");
     } else {
-      setAddition(0);
+      setAdditional(0);
       setBtnCaption("Follow");
       setBtnColor("#EBD8FF");
     }
   }, [isFollowing]);
 
-  const stateToggle = () => {
+  const isFollowingToggle = () => {
     localStorage.setItem(`isFollowing${id}`, JSON.stringify(!isFollowing));
     setIsFollowing((state) => !state);
   };
@@ -55,11 +55,11 @@ function TweetCard({ user }) {
           <Count>{tweets}</Count>tweets
         </Text>
         <Text>
-          <Count>{(followers + addition).toLocaleString("en-US")}</Count>
+          <Count>{(followers + additional).toLocaleString("en-US")}</Count>
           followers
         </Text>
       </Info>
-      <Button type="button" onClick={stateToggle} color={btnColor}>
+      <Button type="button" onClick={isFollowingToggle} color={btnColor}>
         {btnCaption}
       </Button>
     </Card>

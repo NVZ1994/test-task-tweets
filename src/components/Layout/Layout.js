@@ -1,8 +1,10 @@
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
-import { Layout } from "components/Layout/Layout.styled";
-import Header from "components/Header/Header";
+
+import Header from "components/AppBar/AppBar";
 import Footer from "components/Footer/Footer";
+
+import { Layout } from "components/Layout/Layout.styled";
 
 function SharedLayout() {
   return (

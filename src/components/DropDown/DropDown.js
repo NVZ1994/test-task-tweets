@@ -1,4 +1,4 @@
-import { Form, Option, Select } from "components/Filter/Filter.styled";
+import { Form, Option, Select } from "components/DropDown/DropDown.styled";
 
 function Filter({ dropDown }) {
   return (

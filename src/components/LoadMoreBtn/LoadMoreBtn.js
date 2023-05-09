@@ -1,10 +1,10 @@
-import { Button } from "components/LoadMoreBtn/LoadMoreBtn.styled";
+import { LoadMoreButton } from "components/LoadMoreBtn/LoadMoreBtn.styled";
 
 function LoadMore({ handleClick }) {
   return (
-    <Button type="button" onClick={handleClick}>
+    <LoadMoreButton type="button" onClick={handleClick}>
       Load more
-    </Button>
+    </LoadMoreButton>
   );
 }
 

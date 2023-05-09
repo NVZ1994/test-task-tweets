@@ -1,4 +1,5 @@
-import { ReactComponent as LogoIcon } from "assets/logo.svg";
+import { ReactComponent as LogoIcon } from "cardParts/logo.svg";
+
 import { FooterSection, Logo } from "components/Footer/Footer.styled";
 
 function Footer() {
